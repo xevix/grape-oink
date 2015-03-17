@@ -35,7 +35,7 @@ use Oink::Middleware, :logger => Hodel3000CompliantLogger.new(oink_path)
 ## Endpoint translation
 
 Oink expects Rails-style endpoints where there is a `controller` and an `action`. Grape is more flexible
-thank Oink in what these can be, so a few translation rules were added to make Oink happy.
+than Oink in what these can be, so a few translation rules were added to make Oink happy.
 
 The controller name might be namespaced. In this case, only the last class will be used in snakecase. This may change later.
 

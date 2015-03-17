@@ -1,6 +1,6 @@
 ## Overview
 
-The grape-oink gem provides a way to use the [Oink](https://github.com/noahd1/oink) library with Grape.
+The grape-oink gem provides a way to use the [Oink](https://github.com/noahd1/oink) library with [Grape](https://github.com/intridea/grape).
 
 ## Requirements
 

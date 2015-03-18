@@ -8,8 +8,8 @@ module Grape
           controller = options[:for].to_s.split("::").last.underscore
           action = options[:path].try(:first)
           if action
-            action = action.sub("/", "sl_")
-            action = action.sub(":", "col_")
+            action.sub!("/", "sl_")
+            action.sub!(":", "col_")
           end
           method = options[:method].try(:first)
           env_action = "#{action}_#{method}"

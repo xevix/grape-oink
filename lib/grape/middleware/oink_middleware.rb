@@ -3,13 +3,13 @@ module Grape
     class OinkMiddleware < Grape::Middleware::Base
       def before
         options = env['api.endpoint'].try(:options)
-        
+
         if options.present?
           controller = options[:for].to_s.split("::").last.underscore
           action = options[:path].try(:first)
           if action
-            action.gsub!("/", "sl_")
-            action.gsub!(":", "col_")
+            action.to_s.gsub!("/", "sl_")
+            action.to_s.gsub!(":", "col_")
           end
           method = options[:method].try(:first)
           env_action = "#{action}_#{method}"
